@@ -44,9 +44,9 @@ class Student
   end
 
   def self.create(attributes)
-    student = Student.new
-    attributes.each{|key, value| student.send(("#{key}"), value)}
-
+    student = Student.new(attributes)
+    student.save
+    
     student
   end
 
