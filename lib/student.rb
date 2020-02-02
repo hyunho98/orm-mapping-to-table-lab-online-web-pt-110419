@@ -44,7 +44,8 @@ class Student
   end
 
   def self.create(attributes)
-    student = Student.new(attributes)
+    att = attributes.collect{|key, value| value}
+    student = Student.new(att[0], att[1])
     student.save
 
     student
